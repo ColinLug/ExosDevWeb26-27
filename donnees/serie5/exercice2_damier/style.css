@@ -1,0 +1,18 @@
+body{
+    background-color: rgb(221, 188, 221);
+}
+div{
+    border: solid black 2px;
+    display:inline-block;
+    padding: 2vmin 2vmin 2vmin 2vmin;
+    width: 4vmin;
+    height: 4vmin;
+}
+.white{
+    background-color: white;
+    color: black;
+}
+.black{
+    background-color: black;
+    color: white;
+}
