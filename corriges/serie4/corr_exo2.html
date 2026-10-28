@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Exercice 2</h1>
+    <h2>Partie 2.1</h2>
+    <script>
+        let mot_choisi = "arbre"
+        for(let i = 0; i<mot_choisi.length; i++){
+            let new_par = document.createElement("p")
+            new_par.innerText = mot_choisi[i]
+            document.body.appendChild(new_par)
+        }
+    </script>
+    <h2>Partie 2.2</h2>
+    <script>
+        for(let i = 0; i<mot_choisi.length; i++){
+            let new_par = document.createElement("p")
+
+            // Initialisation d'un chaîne vide pour pouvoir récupérer la valeurs ensuite
+            let texte_a_afficher = ""
+            let nbr_alea = Math.floor(Math.random()*11)
+            console.log(nbr_alea)
+            
+            // Seconde boucle permettant de multiplier la lettre
+            for(let j = 0; j<nbr_alea; j++){
+                texte_a_afficher+=mot_choisi[i]
+            }
+
+            new_par.innerText = texte_a_afficher
+            document.body.appendChild(new_par)
+        }
+    </script>
+</body>
+</html>
