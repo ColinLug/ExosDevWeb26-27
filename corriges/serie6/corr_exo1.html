@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>Lancer les dés</button>
+    <div></div>
+    <script>
+        // On sort les fonctions par lisibilité (beaucoup d'indentations si c'est à l'intérieur de l'écouteur d'évènement du bouton)
+        function relancementDe(de){
+            de.addEventListener("dblclick",()=>{
+                let resultat = Math.floor(Math.random()*6)+1;
+                de.src = `images_des/D${resultat}.jpg`;
+
+                if(resultat == 6){
+                    // Une autre façon de récupérer l'élement par l'ID pour pouvoir le passer en paramètre de la fonction
+                    borduresSix(de)
+                    // Note : la fonction de relançage de dés reste active
+                    // Si on voulait alors supprimer la possibilité de relancer le dé, il faudrait passer par des choses qu'on ne montrera pas ici
+                }
+            })
+        }
+
+        function borduresSix(de6){
+            // Ajout de l'évènement de survol avec la souris
+            de6.addEventListener("mouseover", ()=>{
+                // Ajout des bordures jaunes
+                de6.style.border = "2px solid yellow"
+            })
+            // Ajout de l'évènement de sortie du survol avec la souris
+            de6.addEventListener("mouseout", ()=>{
+                // Retrait des bordures jaunes
+                de6.style.border = ""
+            })
+        }
+
+        // Ajout de l'écouteur d'évènement sur le bouton
+        document.querySelector("button").addEventListener("click",()=>{
+            // Permet de réinitialiser la "boîte" (le div) contenant les dés
+            // Cela permet de ne pas ajouter des dés en continu à la page (et avec les mêmes identifiants comme on verra après)
+            let espace_de_des = document.querySelector("div")
+            espace_de_des.innerHTML = ""
+            
+            // Tirage des 3 dés
+            for (let i = 0; i < 3; i++){
+                let resultat = Math.floor(Math.random()*6)+1;
+                let mon_element = document.createElement("img");
+                mon_element.src = `images_des/D${resultat}.jpg`;
+                // Ajout d'un identifiant pour pouvoir le retrouver, correspond également à sa place dans la liste des images
+                mon_element.id = i
+                // Si le résultat est 6...
+                if(resultat == 6){
+                    // On appelle la fonction avec l'élément auquel rajouter les event listeners
+                    borduresSix(mon_element)
+                }else{
+                    // On ajoute un écouteur d'évènement 
+                    relancementDe(mon_element)
+                }
+                // Ajout du dé à l'emmplacement prévu à cet effet (le div)
+                espace_de_des.appendChild(mon_element)
+            }
+        })
+    </script>
+</body>
+</html>
