@@ -26,7 +26,7 @@ div{
 }
 ```
 ## 9. Itération sur tableaux imbriqués
-En fonction du tableau ci-dessous, faites en sorte que les carrés en qui ont un 1 soient bleus
+En fonction du tableau ci-dessous, faites en sorte que les carrés qui sont à la même place que le tableau avec un 1 soient bleus
 ```
 let tab = [
     [1,0,0,0,0],
