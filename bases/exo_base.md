@@ -4,7 +4,7 @@ Faites vous un dossier propre avec un fichier .html, .css, .js et liez les entre
 ## 2. Création d'éléments HTML en JS
 Créez en JS une balise image, et la stocker dans une variable
 ## 3. Modifications d'attributs en JS
-Changez la source de l'image et son `alt-text`, prenez une image que vous aimez par exemple.
+Changez la source de l'image et son `alt`, prenez une image que vous aimez par exemple.
 ## 4. Modification du style en JS
 Changez le style de l'image pour que ses bordures soient jaunes.
 ## 5. Ajout de l'élément à la page
