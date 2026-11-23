@@ -19,7 +19,10 @@ Utilisez une double boucle pour créer et ajouter à la page des `div` placé en
 Dans le CSS écrivez : 
 ```css
 div{
-    display : inline-block; 
+    display: inline-block;
+    border: 2px solid black;
+    height: 50px;
+    width: 50px;
 }
 ```
 ## 9. Itération sur tableaux imbriqués
