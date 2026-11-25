@@ -15,7 +15,7 @@ Créez 50 images comme nous venons de le faire et ajoutez les à la pages.
 Récupérez la 21ème image créé et stockez la dans une variable. Changez sa bordure en rouge.
 
 ## 8. Créez un carré de 5x5
-Utilisez une double boucle pour créer et ajouter à la page des `div` placé en carré
+Utilisez une double boucle pour créer et ajouter à la page des `div` placé en carré de 5 par 5.\
 Dans le CSS écrivez : 
 ```css
 div{
